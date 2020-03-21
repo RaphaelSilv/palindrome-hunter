@@ -1,0 +1,55 @@
+#+OPTIONS: ^:nil
+#+title: Palindrome Hunter
+
+*** Intro
+
+Find any /atomic/ or permuted palindrome in any given file.
+
+Atomic palindrome example: @@html:<i>@@"civic"@@html:</i>@@
+@@html:<br>@@
+!Atomic palindrome example: @@html:<i>@@"A nut for a jar of tuna"@@html:</i>@@
+#+attr_html: : width 200 px
+[[./artifacts/woodtype.jpg]]
+@@html:<h3>@@@@html:<i>@@"Remember, things take time"@@html:</i>@@@@html:</h3>@@\\
+[[https://en.wikipedia.org/wiki/Piet_Hein_(scientist)][Piet Hein]]
+@@html:<hr>@@
+
+
+*** Motivation
+#+BEGIN_QUOTE
+Improve my c++ skills implementing something meaningful.
+#+END_QUOTE
+*** Is there anything useful here ?
+#+BEGIN_QUOTE
+Well, I tried the most apply programming good practices, clean code principles and
+problem solving attitude(i.e. rack your brains). So, yes.
+#+END_QUOTE
+*** References
+*Programming Principles And Practice Using C++ - Second Edition*\\
+By the great, Bjarne Stroustrup C++ creator.\\
+*** Runnin' it
+Specify the file name properly placed at =artifacts= folder when instantiate a /palindrome/ object like so:
+
+#+BEGIN_SRC cpp
+g++ src/palindrome.cpp main.cpp -o <output name>
+#include "src/palindrome.h"
+
+int main(int argc, char const *argv[]) {
+
+  Palindrome palindrome = { "the-tragedy-of-hamlet-by-w-shakspeare.txt" };
+  palindrome.readWordsFromFile();
+}
+#+END_SRC
+Run it Forest, run..
+#+BEGIN_SRC cpp
+g++ src/palindrome.cpp main.cpp -o <output file name>
+#+END_SRC
+Expected output:
+#+BEGIN_SRC cpp
+did is The Permuted Palindrome #435
+too is The Permuted Palindrome #436
+bee is The Permuted Palindrome #437
+offendendo is The Permuted Palindrome #438
+bee is The Permuted Palindrome #439
+hee is The Permuted Palindrome #440
+#+END_SRC
