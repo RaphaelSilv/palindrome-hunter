@@ -15,6 +15,7 @@ public:
   void readWordsFromFile();
   bool isPalindrome(std::string);
   bool isPermutedPalindrome(std::string);
+  void toLowerCase(std::string&);
   inline int getNumPalindromes() {
     return numPalindromes;
   }
@@ -24,13 +25,13 @@ public:
   }
 
   ~Palindrome();
+
 private:
   const std::regex ponctuation { "[[:punct:]]" };
   char const* chars { (char *) ".,?!.:;_,!'$%*#^&+/-" };
   int numPalindromes = 0;
   int numPermutedPalindromes = 0;
   std::string fileName;
-  void toLowerCase(std::string&);
   inline void incrementPalindromes(int &palindrome) {
     palindrome++;
   }

@@ -10,8 +10,7 @@ void Palindrome::readWordsFromFile() {
   std::smatch matches;
   std::ifstream ist;
   std::string word;
-  std::vector<std::string> vec;
-  std::string path = "artifacts/";
+  std::string path = "../artifacts/";
 
   ist.open(path + fileName, std::ifstream::in);
 

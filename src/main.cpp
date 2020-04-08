@@ -1,4 +1,4 @@
-#include "src/palindrome.h"
+#include "palindrome.h"
 
 int main(int argc, char const *argv[]) {
 

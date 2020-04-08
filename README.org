@@ -1,13 +1,12 @@
 #+OPTIONS: ^:nil
 #+title: Palindrome Hunter
-
-*** Intro
-
-Find any /atomic/ or permuted palindrome in any given file.
-
-Atomic palindrome example: @@html:<i>@@"civic"@@html:</i>@@
-@@html:<br>@@
-!Atomic palindrome example: @@html:<i>@@"A nut for a jar of tuna"@@html:</i>@@
+Find any /atomic/ or /permuted/ palindrome in any given file.
+#+BEGIN_SRC cpp
+Atomic palindrome example: "civic"
+#+END_SRC
+#+BEGIN_SRC cpp
+!Atomic palindrome example: "A nut for a jar of tuna"
+#+END_SRC
 #+attr_html: : width 200 px
 [[./artifacts/woodtype.jpg]]
 @@html:<h3>@@@@html:<i>@@"Remember, things take time"@@html:</i>@@@@html:</h3>@@\\
@@ -26,12 +25,11 @@ problem solving attitude(i.e. rack your brains). So, yes.
 #+END_QUOTE
 *** References
 *Programming Principles And Practice Using C++ - Second Edition*\\
-By the great, Bjarne Stroustrup C++ creator.\\
+By the great, Bjarne Stroustrup C++ creator.
 *** Runnin' it
 Specify the file name properly placed at =artifacts= folder when instantiate a /palindrome/ object like so:
 
 #+BEGIN_SRC cpp
-g++ src/palindrome.cpp main.cpp -o <output name>
 #include "src/palindrome.h"
 
 int main(int argc, char const *argv[]) {
