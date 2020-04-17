@@ -19,7 +19,6 @@ public:
   inline int getNumPalindromes() {
     return numPalindromes;
   }
-
   inline int getNumPermutedPalindromes() {
     return numPermutedPalindromes;
   }

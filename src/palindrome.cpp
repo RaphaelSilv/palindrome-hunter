@@ -43,21 +43,20 @@ void Palindrome::readWordsFromFile() {
 }
 
 bool Palindrome::isPalindrome(std::string str) {
+  #define EQUALS 0
 
   bool palindrome = true;
   toLowerCase(str);
-  for (size_t i = 0; i < str.length(); i++) {
-    if (str.at(i) != str.at((str.length()) - i - 1)) {
-      palindrome = false;
-      break;
-    }
-  }
-  if (palindrome) {
+  std::string aux = str;
+  std::reverse(aux.begin(), aux.end()); 
+    if (aux.compare(str) == EQUALS){
     incrementPalindromes(numPalindromes);
-    std::cout << str << " is The Palindrome #" << getNumPalindromes() <<
-      "\n";
-  }
-
+      std::cout << str << " is The Palindrome #" << getNumPalindromes() <<
+        "\n";
+    }else{
+      palindrome = false;
+    }
+    
   return palindrome;
 }
 
